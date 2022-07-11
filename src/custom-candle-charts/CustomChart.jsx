@@ -17,10 +17,7 @@ const CustomChart = () => {
 
   return (
     <MainDiv>
-      <CustomCandle
-        SVG_CHART_WIDTH={SVG_CHART_WIDTH}
-        SVG_CHART_HEIGHT={SVG_CHART_HEIGHT}
-      />
+      <CustomCandle />
     </MainDiv>
   );
 };
@@ -28,4 +25,5 @@ export default CustomChart;
 
 const MainDiv = styled.div`
   border: 1px solid;
+  padding: 50px;
 `;

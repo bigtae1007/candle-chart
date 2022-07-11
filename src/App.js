@@ -7,7 +7,8 @@ import CustomChart from "./custom-candle-charts/CustomChart";
 function App() {
   return (
     <div className="App">
-      <CustomChart />
+      <Chart2 />
+      <Chart1 />
     </div>
   );
 }

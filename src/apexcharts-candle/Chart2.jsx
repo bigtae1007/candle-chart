@@ -11,7 +11,7 @@ const Chart2 = () => {
         width: 500,
         toolbar: {
           // 상단 툴바
-          show: true,
+          show: false,
           reset: false,
         },
         // 차트 배경색
@@ -26,7 +26,9 @@ const Chart2 = () => {
         },
       },
       yaxis: {
-        // 세로선 위치
+        // 세로선 위치 좌 우
+        showAlways: true,
+        showForNullSeries: true,
         opposite: true,
         // hover시 가로선
         tooltip: {
@@ -59,7 +61,7 @@ const Chart2 = () => {
         },
         axisTicks: {
           // 표 끝 금액으로 연결되는 선
-          show: false,
+          show: true,
           borderType: "solid",
           color: "#f00",
           width: 10,
@@ -105,6 +107,7 @@ const Chart2 = () => {
             "<br></br>" +
             "</span>" +
             "<span>" +
+            "시작가 : 1000" +
             "<br></br>" +
             "</span>" +
             "<span>" +
@@ -136,41 +139,34 @@ const Chart2 = () => {
           },
           offsetX: 0,
           // 떨어지는 거리
-          offsetY: 20,
+          offsetY: 0,
           show: true,
           formatter: function (val) {
             // x축 원하는데로 조작하기
             console.log(val);
-            return val?.slice(0, 10);
+            return val;
           },
           style: {
             // 하단 날짜 색
             colors: "#fff",
           },
         },
-        // type: "category",
-        // // 갯수 정하기
-        // tickAmount: 20,
-        // min: 0,
-        // // 한페이지 최대 갯수
-        // max: 30,
-        // // 넘기는 페이지 수?
-        // range: 30,
-        // // 하단 box 디자인하기
-        // axisBorder: {
-        //   show: true,
-        //   color: "#fff",
-        //   height: 40,
-        //   width: "100%",
-        //   offsetX: 0,
-        //   offsetY: 0,
-        // },
+        type: "category",
+        // 갯수 정하기
+        tickAmount: 20,
+        min: 0,
+        // 한페이지 최대 갯수
+        max: 100,
+        // 넘기는 페이지 수?
+        range: 100,
+        // 하단 box 디자인하기
+
         axisTicks: {
           // 가로 label 부분 구분 선
           show: true,
           borderType: "solid",
           color: "#78909C",
-          height: 6,
+          height: 10,
           offsetX: 0,
           offsetY: 0,
         },
