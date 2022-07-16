@@ -8,7 +8,7 @@ const Chart2 = () => {
       chart: {
         type: "candlestick",
         height: 350,
-        width: 500,
+        width: 700,
         toolbar: {
           // 상단 툴바
           show: false,

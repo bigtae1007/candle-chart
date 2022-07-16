@@ -133,7 +133,7 @@ const Chart1 = () => {
 
         formatter: function (val, l) {
           // x축 원하는데로 조작하기
-          console.log(dayjs(val).format("MM DD"));
+          console.log(val);
           return dayjs(val).format("MM DD");
         },
         style: {
@@ -232,7 +232,7 @@ const Chart1 = () => {
     },
   };
   return (
-    <div style={{ width: "400px" }} id="chart">
+    <div style={{ width: "355px" }} id="chart">
       <div>asdasd</div>
       <ReactApexChart
         options={dState}
@@ -244,7 +244,7 @@ const Chart1 = () => {
           },
         ]}
         type="candlestick"
-        height={350}
+        height={200}
       />
     </div>
   );
